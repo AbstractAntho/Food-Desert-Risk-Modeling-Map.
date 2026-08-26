@@ -8,7 +8,6 @@ The project combines Random Forest feature selection, logistic regression,
 county-level risk scoring, an interactive Folium map, and locally generated
 Ollama policy recommendations.
 
-![Interactive map preview](images/map_preview.png)
 
 ## Project Overview
 
