@@ -1,0 +1,82 @@
+{
+  "input_sha256": "00a721633e5ab59f123273ca7d2d10fa191641631bf67884486e088b6b25d2ee",
+  "seed": 42,
+  "target": "LILATracts_1And10",
+  "test_fraction": 0.2,
+  "input_tracts": 72531,
+  "retained_tracts": 71782,
+  "train_tracts": 57425,
+  "test_tracts": 14357,
+  "versions": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  },
+  "selected_features": {
+    "original": [
+      "LowIncomeTracts",
+      "MedianFamilyIncome",
+      "PovertyRate",
+      "TractHUNV",
+      "TractSNAP",
+      "TractAsian",
+      "TractHispanic",
+      "TractWhite",
+      "TractBlack",
+      "TractSeniors"
+    ],
+    "without_low_income_flag": [
+      "MedianFamilyIncome",
+      "PovertyRate",
+      "TractSNAP",
+      "TractHUNV",
+      "TractAsian",
+      "TractHispanic",
+      "TractBlack",
+      "TractWhite",
+      "TractSeniors",
+      "TractKids"
+    ]
+  },
+  "metrics": [
+    {
+      "model": "dummy_prior",
+      "roc_auc": 0.5,
+      "average_precision": 0.12829978407745352,
+      "accuracy": 0.8717002159225465,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "brier": 0.11183894952805773
+    },
+    {
+      "model": "original",
+      "roc_auc": 0.8986666597260269,
+      "average_precision": 0.45268201195435354,
+      "accuracy": 0.7613707599080588,
+      "precision": 0.34739884393063586,
+      "recall": 0.9788273615635179,
+      "f1": 0.5127986348122867,
+      "brier": 0.14372397408193502
+    },
+    {
+      "model": "without_low_income_flag",
+      "roc_auc": 0.8249480861836589,
+      "average_precision": 0.3511070120342048,
+      "accuracy": 0.7257783659538901,
+      "precision": 0.29456756226711117,
+      "recall": 0.8154180238870793,
+      "f1": 0.432790664169428,
+      "brier": 0.17848437593806502
+    }
+  ],
+  "limitations": [
+    "historical data",
+    "random tract split",
+    "uncalibrated balanced scores",
+    "raw demographic counts",
+    "full-table exports include training tracts"
+  ]
+}
